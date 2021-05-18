@@ -1,3 +1,4 @@
+/* aside */
 .container {
     max-width: 1920px;
     width: 100%;
@@ -9,19 +10,15 @@ aside {
     width: 100%;
     margin-top: 0;
     margin-left: 0; 
-    max-height: 1080px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 aside>div {
     display: flex;
     justify-content: space-evenly;
     margin-top: 42px; 
-}
-.logo { 
-    display: flex;
-    
 }
 .logo p {
     font-family: 'Avenir LT Std';
@@ -41,7 +38,6 @@ aside>div {
 .navbar {
     margin-left: 34px;
     margin-top: 108px;
-    display: flex;
     align-content: space-between;
 }
 .navbar li {
@@ -57,14 +53,16 @@ aside>div {
     margin-bottom: 31px;
     
 }
-.active li {
+.flex {
     display: flex;
-   
+}
+.wrap {
+    flex-wrap: wrap;
 }
 .active a{
     align-items: center;
     margin-top: 17px;
-}
+}  
 li a {
     display: flex;
     color: #FFFFFF;
@@ -78,6 +76,11 @@ li a {
 .navbar a {
     margin-bottom: 53px;  
 } 
+.navbar a:hover, .following a:hover{
+    background-color: #f14696;
+    border-radius: 12px;
+    transition: background-color 0.3s linear;
+}
 .following {
     margin-top: 89px;
     margin-left: 60px;
@@ -100,3 +103,94 @@ li a {
     color: #FFFFFF;
     margin-bottom: 106px;
 }
+/* header */
+header {
+    justify-content: space-evenly;
+    max-width: 1513px;
+    width: 100%;
+    max-height: 116px;
+   
+}
+.search {
+    max-width: 446px;
+    width: 100%;
+    align-items: center;
+    max-height: 56px;
+    background-color:#F8F8F8;
+    border-radius: 12px;
+    margin-top: 30px;
+    justify-content: space-between;
+    
+}
+.search img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.search input {
+    font-size: 14px;
+    font-family: 'Avenir 85';
+    color: #111111;
+    opacity: 50%;
+    padding-left: 20px;
+    line-height: 19px;
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+.icon {
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: 56px;
+    margin-top: 30px;
+    
+}
+.upload {
+    background-color: #FF2288;
+    width: 129px;
+    height: 56px;
+    border-radius: 12px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.icon p{
+    font-size: 14px;
+    font-family: 'Avenir 85';
+    color: #FF2288;
+    line-height: 19px;
+    cursor: pointer;
+}
+input[type=file]{
+    display: none;
+}
+.upload label {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Avenir 85';  
+    cursor: pointer;  
+    text-transform: uppercase;
+} 
+.icon a {
+    margin-left: 30px;
+}
+.point {
+    position: absolute;
+}
+.inbox {
+    background-image: url(../images/inbox.png);
+}
+.notification {
+    background-image: url(../images/Component\ 7\ –\ 2.png);
+}
+.inbox, .notification {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 30px;
+    cursor: pointer;
+}
+/* section */
