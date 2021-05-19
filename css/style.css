@@ -1,115 +1,102 @@
-/* aside */
 .container {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
 }
+/* aside */
 aside {
     background-color: #222222;
-    max-width: 319px;
-    width: 100%;
-    margin-top: 0;
-    margin-left: 0; 
-    height: 100%;
+    width: 20%;
+    justify-content: center; 
+    height: 50%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    padding: 0 3%;
+    position: sticky;  
 }
-aside>div {
+.logo-box {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 42px; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+.logo {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    display: flex;
 }
 .logo p {
-    font-family: 'Avenir LT Std';
+    font-family: 'Avenir LT Pro 65';
     color: #FFFFFF;
     font-size: 24px;
-    font-weight: 900;
 }
 .logo span {
-    font-family: 'Avenir LT Std';
+    font-family: 'Avenir LT Pro 45 Book';
     font-size: 24px;
-    font-weight: normal;
-    color: #FFFFFF;  
 }
 .burger {
-    margin-left: 87px;
+    margin-top: 42px;
 }
 .navbar {
-    margin-left: 34px;
-    margin-top: 108px;
-    align-content: space-between;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.navbar li {
-    margin-left: 60px;
-}
-.active {
-    border-radius: 4px;
-    justify-content: center;
-    background-color: #FF2288;
-    width: 259px;
-    /* width: 100%; */
+.navbar a, .following a {
     height: 60px;
-    margin-bottom: 31px;
-    
-}
-.flex {
     display: flex;
-}
-.wrap {
-    flex-wrap: wrap;
-}
-.active a{
     align-items: center;
-    margin-top: 17px;
-}  
-li a {
-    display: flex;
-    color: #FFFFFF;
-    align-items: center;
+    font-size: 16px;
+    color:#FFFFFF;
+    line-height: 21px;
+    font-family: 'Avenir LT Pro';
 }
-.navbar p, .following p {
-    margin-left: 15px;
-    font-family: 'Avenir LT Std';
-    font-size: 16px; 
-}
-.navbar a {
-    margin-bottom: 53px;  
-} 
-.navbar a:hover, .following a:hover{
-    background-color: #f14696;
-    border-radius: 12px;
-    transition: background-color 0.3s linear;
+.navbar img, .following img {
+    margin-right: 15px;
+    margin-left: 3%;
 }
 .following {
-    margin-top: 89px;
-    margin-left: 60px;
+    margin-top: 87px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .following h5 {
     font-size: 12px;
     color: #FFFFFF;
-    font-family: 'Avenir 85';
-}
-.following ul {
-    margin-top: 31px;
-}
-.following a {
-    margin-bottom: 15px;
+    font-family: 'Avenir LT Pro 55 Roman';
+    padding-left: 30px;
+    margin-bottom: 30px;
 }
 .more {
-    font-family: 'Avenir 85';
+    font-family: 'Avenir LT Pro 55 Roman';
     font-size: 14px;
     margin-top: 19px;
     color: #FFFFFF;
     margin-bottom: 106px;
+    cursor: pointer;
 }
+.navbar a:hover, .following a:hover{
+    background-color: #f14696;
+    border-radius: 12px;
+    padding: 5%;
+}
+
 /* header */
+.content {
+     width: 80%;
+}
 header {
-    justify-content: space-evenly;
-    max-width: 1513px;
-    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     max-height: 116px;
-   
+    width: 100%;
+    border-bottom: solid 1px rgba(0,0,0,0.2);  
 }
 .search {
     max-width: 446px;
@@ -119,70 +106,42 @@ header {
     background-color:#F8F8F8;
     border-radius: 12px;
     margin-top: 30px;
-    justify-content: space-between;
-    
+    display: flex;
+    justify-content: space-between;  
 }
 .search img {
     width: 24px;
     height: 24px;
-    margin-right: 20px;
+    border: none;
     cursor: pointer;
 }
 .search input {
     font-size: 14px;
-    font-family: 'Avenir 85';
+    font-family: 'Avenir LT Pro 55 Roman';
     color: #111111;
     opacity: 50%;
-    padding-left: 20px;
     line-height: 19px;
     width: 100%;
     height: 100%;
-    border:none;
+    padding: 10px;
+    border: none;
 }
 .icon {
+    
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     max-height: 56px;
     margin-top: 30px;
     
 }
-.upload {
-    background-color: #FF2288;
-    width: 129px;
-    height: 56px;
-    border-radius: 12px;
-    margin-left: 30px;
-    align-items: center;
-    justify-content: center;
-}
 .icon p{
     font-size: 14px;
-    font-family: 'Avenir 85';
+    font-family: 'Avenir LT Pro 55 Roman';
     color: #FF2288;
     line-height: 19px;
     cursor: pointer;
-}
-input[type=file]{
-    display: none;
-}
-.upload label {
-    color: #FFFFFF;
-    font-size: 14px;
-    font-family: 'Avenir 85';  
-    cursor: pointer;  
-    text-transform: uppercase;
-} 
-.icon a {
-    margin-left: 30px;
-}
-.point {
-    position: absolute;
-}
-.inbox {
-    background-image: url(../images/inbox.png);
-}
-.notification {
-    background-image: url(../images/Component\ 7\ –\ 2.png);
+    
 }
 .inbox, .notification {
     width: 25px;
@@ -193,4 +152,122 @@ input[type=file]{
     margin-left: 30px;
     cursor: pointer;
 }
+input[type=file]{
+    display: none;
+}
+.inbox {
+    background-image: url(../images/inbox.png);
+}
+.notification {
+    background-image: url(../images/Component\ 7\ –\ 2.png);
+}
+.icon a {
+    margin-left: 30px;
+}
+.upload {
+    background-color: #FF2288;
+    width: 129px;
+    height: 56px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    display: flex;
+} 
+.upload label {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Avenir LT Pro 55 Roman';  
+    cursor: pointer;  
+    text-transform: uppercase;
+} 
+
 /* section */
+.section-bar {
+    justify-content: center; 
+    max-width: 90%;
+    width: 100%;
+    margin: 40px auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+} 
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 56px;
+    align-items: center;
+    justify-content: space-evenly; 
+    padding: 16px 0;
+}
+.section-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.all {
+    margin-left: 0;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+}
+
+.section-bar a {
+    color: #222222;
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+}
+.filter {
+    width: 20%;
+    height: 100%;
+    border-radius: 12px;
+    align-items: center;
+    border-color: #D8D8D8;
+    display: flex;
+    justify-content: flex-end; 
+}
+.filter img {
+    width: 24px;
+    height: 24px;
+    margin-left: 30%;
+}
+.filter p {
+    margin-right: 8%;
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+} 
+.section-bar a:hover {
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 12px;
+} 
+.article {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+} 
+.box p {
+    font-family: 'Avenir LT Pro';
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}   
+.load {
+    width: 289px;
+    height: 56px;
+    background-color:#F2F2F2;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    align-items: center;
+    margin-left: 35%;
+    cursor: pointer;
+    margin-top: 70px;;
+}
+.load p {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+}
