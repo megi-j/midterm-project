@@ -14,7 +14,9 @@ aside {
     flex-direction: column;
     padding: 0 3%;
     position: sticky;  
+    flex-wrap: wrap;
 }
+
 .logo-box {
     display: flex;
     justify-content: space-between;
@@ -46,6 +48,9 @@ aside {
     justify-content: space-between;
     flex-direction: column;
 }
+.navbar ul {
+    flex-wrap: wrap;
+}
 .navbar a, .following a {
     height: 60px;
     display: flex;
@@ -54,6 +59,7 @@ aside {
     color:#FFFFFF;
     line-height: 21px;
     font-family: 'Avenir LT Pro';
+    flex-wrap: wrap;
 }
 .navbar img, .following img {
     margin-right: 15px;
@@ -83,7 +89,7 @@ aside {
 .navbar a:hover, .following a:hover{
     background-color: #f14696;
     border-radius: 12px;
-    padding: 5%;
+    transition: background-color 0.3s linear;
 }
 
 /* header */
@@ -206,17 +212,19 @@ input[type=file]{
     justify-content: space-between;
     width: 80%;
 }
-.all {
+/* .all {
     margin-left: 0;
     padding: 10px;
     background-color: #F2F2F2;
     border-radius: 12px;
-}
+} */
 
 .section-bar a {
     color: #222222;
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
+    transition: transition: background-color 0.5s linear;
+    padding: 10px;
 }
 .filter {
     width: 20%;
@@ -239,7 +247,6 @@ input[type=file]{
 } 
 .section-bar a:hover {
     background-color: #F2F2F2;
-    padding: 10px;
     border-radius: 12px;
 } 
 .article {
@@ -267,9 +274,18 @@ input[type=file]{
     cursor: pointer;
     margin-top: 70px;;
 }
+.load:hover {
+    background-color: #FF2288;
+    color: #FFFFFF;
+}
 .load p {
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
+}
+.box:hover {
+    background-color:#F2F2F2;
+    border-radius: 12px;
+    transition: background-color 0.3s linear;
 }
 /* 2nd section */
 .designer {
@@ -295,6 +311,7 @@ input[type=file]{
 }
 .profile {
     margin-top: 54px;
+    margin-left: 1%;
     flex-direction: column;
 }
 .profile h6 {
@@ -318,13 +335,68 @@ input[type=file]{
     border: none;
     border-radius: 12px;
     margin-bottom: 10px;
+    padding: 10px;
+}
+.profile button:hover {
+    background-color: #FF2288;
+    color: #FFFFFF;
 }
 .active {
-    background-color: rgb(160, 159, 159);
+    background-color: rgb(231, 226, 226);
 }
-.profile img:hover {
-    background-color: rgb(238, 224, 220);
-}
+
 .color {
     background-color: #FAFAFA;
+}
+/* footer */
+footer {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+.for-designer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.for-designer a, .hire-designer a, .company a, .director a {
+    font-family: 'Avenir LT Pro 45 Book';
+    font-size: 16px;
+    line-height: 40px;
+    padding: 10px;
+}
+.for-designer a:hover, .hire-designer a:hover, .company a:hover, .director a:hover {
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    
+}
+
+.for-designer h6, .hire-designer h6, .company h6, .director h6 {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 36px;
+}
+.hire-designer, .company, .director {
+    margin-left: 5%;
+}
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 113px;
+}
+.footer a {
+    margin-left: 20px;
+}
+.footer p {
+    font-family: 'Avenir LT Pro 45 Book';
+    font-size: 16px;
+    line-height: 40px;
+}
+.footer span {
+    font-family: 'Avenir LT Pro 65';
+    font-size: 16px;
 }
