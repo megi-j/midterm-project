@@ -271,3 +271,60 @@ input[type=file]{
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
 }
+/* 2nd section */
+.designer {
+    display: flex;
+    justify-content: space-between;
+}
+.designer h2 { 
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-style: 32px;
+    line-height: 43px;
+}
+.designer a {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 14px;
+    line-height: 19px;
+    opacity: 30%;
+}
+.profile-box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.profile {
+    margin-top: 54px;
+    flex-direction: column;
+}
+.profile h6 {
+    font-family: 'Avenir LT Pro';
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+.profile p {
+    font-family: 'Avenir LT Pro 45 Book';
+    font-size: 11px;
+    opacity: 60%;
+    letter-spacing: 30;
+    margin-bottom: 10px;
+}
+.profile button {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 30;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.active {
+    background-color: rgb(160, 159, 159);
+}
+.profile img:hover {
+    background-color: rgb(238, 224, 220);
+}
+.color {
+    background-color: #FAFAFA;
+}
