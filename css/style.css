@@ -2,7 +2,12 @@
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+}
+.flex {
     display: flex;
+}
+.wrap {
+    flex-wrap: wrap;
 }
 /* aside */
 aside {
@@ -16,17 +21,12 @@ aside {
     position: sticky;  
     flex-wrap: wrap;
 }
-
 .logo-box {
-    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 } 
 .logo {
     margin-top: 42px;
-    display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 .logo a {
     display: flex;
@@ -45,7 +45,6 @@ aside {
 }
 .navbar {
     margin-top: 10%;
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -68,7 +67,6 @@ aside {
 }
 .following {
     margin-top: 87px;
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -83,8 +81,8 @@ aside {
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 14px;
     margin-top: 19px;
-    color: #FFFFFF;
     margin-bottom: 106px;
+    color: #FFFFFF;
     cursor: pointer;
 }
 .navbar a:hover, .following a:hover{
@@ -92,7 +90,6 @@ aside {
     border-radius: 12px;
     transition: background-color 0.3s linear;
 }
-
 /* header */
 .content {
      width: 80%;
@@ -103,23 +100,22 @@ header {
     align-items: center;
     max-height: 116px;
     width: 100%;
-    border-bottom: solid 1px rgba(0,0,0,0.2);  
+    border-bottom: solid 1px rgba(54, 53, 53, 0.2);  
 }
 .hidden {
-    display: flex;
     display: none;
     margin-top: 30px;
-    background-color: #a79da2;
+    background-color: #141314;
     margin-right: 20%;
+    cursor: pointer;
 }
 .search {
-    max-width: 446px;
+    width: 30%;
     align-items: center;
     max-height: 56px;
     background-color:#F8F8F8;
     border-radius: 12px;
     margin-top: 30px;
-    display: flex;
     justify-content: space-between;  
 }
 .search img {
@@ -136,16 +132,14 @@ header {
     line-height: 19px;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 20px;
     border: none;
 }
 .icon {
-    display: flex;
     align-items: center;
     justify-content: space-evenly;
     max-height: 56px;
-    margin-top: 30px;
-    
+    margin-top: 30px;   
 }
 .icon p{
     font-size: 14px;
@@ -184,7 +178,6 @@ input[type=file]{
     align-items: center;
     justify-content: center;
     margin-left: 30px;
-    display: flex;
 } 
 .upload label {
     color: #FFFFFF;
@@ -193,7 +186,6 @@ input[type=file]{
     cursor: pointer;  
     text-transform: uppercase;
 } 
-
 /* section */
 .section-bar {
     justify-content: center; 
@@ -201,20 +193,13 @@ input[type=file]{
     width: 100%;
     margin: 40px auto;
     flex-direction: column;
-    flex-wrap: wrap;
 } 
 .menu {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     max-height: 56px;
     align-items: center;
     justify-content: space-evenly; 
     padding: 16px 0;
-}
-.hide-list {
-    display: none;
-    cursor: pointer;
 }
 .section-bar ul {
     display: flex;
@@ -229,22 +214,33 @@ input[type=file]{
     transition: transition: background-color 0.5s linear;
     padding: 10px;
 }
-.filter, .hide-list {
+.filter {
     width: 10%;
     height: 100%;
-    /* border: 2px solid #D8D8D8; */
-    border-radius: 12px;
     align-items: center;
-    border-color: #D8D8D8;
-    display: flex;
-    justify-content: flex-end; 
+    justify-content: space-between; 
+    padding: 10px;
+}
+.type-list {
+    display: none;
+    width: 10%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between; 
+    cursor: pointer;
+}
+.type-list p {
+    margin-right: 8%;
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+    display: none;
 }
 .filter img {
     width: 24px;
     height: 24px;
     margin-left: 30%;  
 }
-.filter p, .hide-list p {
+.filter p {
     margin-right: 8%;
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
@@ -254,10 +250,8 @@ input[type=file]{
     border-radius: 12px;
 } 
 .article {
-    display: flex;
     width: 100%;
     margin-top: 40px;
-    flex-wrap: wrap;
     justify-content: space-evenly; 
 } 
 .box, .box img {
@@ -266,7 +260,7 @@ input[type=file]{
 }
 .box p {
     font-family: 'Avenir LT Pro';
-    font-size: 12px;
+    font-size: 18px;
     line-height: 24px;
     text-align: center;
 }   
@@ -274,7 +268,6 @@ input[type=file]{
     width: 20%;
     height: 56px;
     background-color:#F2F2F2;
-    display: flex;
     justify-content: center;
     border-radius: 12px;
     align-items: center;
@@ -297,7 +290,6 @@ input[type=file]{
 }
 /* 2nd section */
 .designer {
-    display: flex;
     justify-content: space-between;
 }
 .designer h2 { 
@@ -312,15 +304,16 @@ input[type=file]{
     opacity: 30%;
 }
 .profile-box {
-    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     text-align: center;
 }
 .profile {
     margin-top: 54px;
     margin-left: 1%;
     flex-direction: column;
+}
+.profile img {
+    cursor: pointer;
 }
 .profile h6 {
     font-family: 'Avenir LT Pro';
@@ -352,7 +345,6 @@ input[type=file]{
 .active {
     background-color: rgb(231, 226, 226);
 }
-
 .color {
     background-color: #FAFAFA;
 }
@@ -365,7 +357,6 @@ footer {
     margin-top: 70px;
 }
 .for-designer {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -377,10 +368,8 @@ footer {
 }
 .for-designer a:hover, .hire-designer a:hover, .company a:hover, .director a:hover {
     background-color: #F2F2F2;
-    border-radius: 12px;
-    
+    border-radius: 12px;  
 }
-
 .for-designer h6, .hire-designer h6, .company h6, .director h6 {
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
@@ -391,7 +380,6 @@ footer {
     margin-left: 5%;
 }
 .footer {
-    display: flex;
     width: 100%;
     justify-content: space-between;
     margin-top: 113px;
@@ -413,14 +401,72 @@ footer {
     width: 20px;
     height: 20px;
     margin-left: 20%;
+    cursor: pointer;
 }
-
-
+/* 2nd page */
+.person {
+    border: 2px solid #FF2288;
+    border-radius: 28px;
+    padding: 10px;
+}
+.section-bar-2 {
+    max-width: 90%;
+    width: 100%;
+    margin: 70px auto;
+    flex-direction: column;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    flex-wrap: wrap;
+}
+tr {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 18px;
+    line-height: 24px;
+    transition: all 0.2s linear;
+    flex-wrap: wrap;
+}
+td {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 16px;
+    line-height: 21px;
+    color: #AFAFAF;
+} 
+th, td {
+    padding: 29px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:first-child:hover {
+    transform: none !important;
+    background-color: white !important;
+    cursor:inherit !important;
+}
+tr:nth-child(even):hover {
+    transform: scale(1.1);
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+tr:nth-child(odd):hover {
+    transform: scale(1.1);
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+td:hover {
+    color: #FF2288;
+}
 /* responsive  */
 @media(max-width:1024px){
-    .navbar p, .following p, .search input, .icon p, .upload, .menu ul, .following h5, .for-designer a, .hire-designer a, .company a, 
-    .director a {
+    .navbar img, .following p, .search, .icon p, .upload, .menu ul, .following h5, .for-designer a, .hire-designer a, .company a, 
+    .director a, td:first-child, th:first-child, th:nth-child(5), td:nth-child(5), th:nth-child(3), td:nth-child(3) {
         display: none;
+    }
+    .following {
+        justify-content: center;
+    }
+    .more {
+        display: block !important;
     }
     .navbar a, .following a, .logo, .more, .burger{
         justify-content: center;  
@@ -428,10 +474,10 @@ footer {
     header {
         justify-content: space-evenly;
     }
-    .hidden, .arrow, .hide-list {
+    .hidden, .arrow, .type-list, .type-list p {
         display: block; 
     }
-    .hide-list {
+    .type-list {
         margin-right: 15%;
     }
     .logo p, .logo span {
@@ -441,17 +487,18 @@ footer {
         flex-wrap: wrap;
     }
     .footer {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
     .burger {
         margin-left: 15%;
-    }
+    } 
 }
 @media(max-width:480px){
-    .logo, .inbox, .notification {
+    .logo, .navbar p, .inbox, .notification, th:nth-child(6), td:nth-child(6) {
         display: none;
     }
-    
+    .navbar img {
+        display: block;  
+    }
 }
