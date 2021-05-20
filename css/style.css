@@ -26,6 +26,7 @@ aside {
     margin-top: 42px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .logo a {
     display: flex;
@@ -211,6 +212,10 @@ input[type=file]{
     justify-content: space-evenly; 
     padding: 16px 0;
 }
+.hide-list {
+    display: none;
+    cursor: pointer;
+}
 .section-bar ul {
     display: flex;
     align-items: center;
@@ -224,7 +229,7 @@ input[type=file]{
     transition: transition: background-color 0.5s linear;
     padding: 10px;
 }
-.filter {
+.filter, .hide-list {
     width: 10%;
     height: 100%;
     /* border: 2px solid #D8D8D8; */
@@ -239,7 +244,7 @@ input[type=file]{
     height: 24px;
     margin-left: 30%;  
 }
-.filter p {
+.filter p, .hide-list p {
     margin-right: 8%;
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
@@ -255,6 +260,10 @@ input[type=file]{
     flex-wrap: wrap;
     justify-content: space-evenly; 
 } 
+.box, .box img {
+    max-width: 289px;
+    width: 100%;
+}
 .box p {
     font-family: 'Avenir LT Pro';
     font-size: 12px;
@@ -262,7 +271,7 @@ input[type=file]{
     text-align: center;
 }   
 .load {
-    width: 289px;
+    width: 20%;
     height: 56px;
     background-color:#F2F2F2;
     display: flex;
@@ -419,14 +428,30 @@ footer {
     header {
         justify-content: space-evenly;
     }
-    .hidden, .arrow {
-        display: block;   
+    .hidden, .arrow, .hide-list {
+        display: block; 
+    }
+    .hide-list {
+        margin-right: 15%;
     }
     .logo p, .logo span {
         font-size: 15px;
     }
     .container {
         flex-wrap: wrap;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .burger {
+        margin-left: 15%;
+    }
+}
+@media(max-width:480px){
+    .logo, .inbox, .notification {
+        display: none;
     }
     
 }
