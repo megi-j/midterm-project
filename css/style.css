@@ -24,7 +24,7 @@ aside {
 .logo-box {
     justify-content: space-between;
 } 
-.logo {
+.logo, .burger {
     margin-top: 42px;
     align-items: center;
 }
@@ -35,13 +35,12 @@ aside {
     font-family: 'Avenir LT Pro 65';
     color: #FFFFFF;
     font-size: 24px;
+    line-height: 32px;
 }
 .logo span {
     font-family: 'Avenir LT Pro 45 Book';
     font-size: 24px;
-}
-.burger {
-    margin-top: 42px;
+    line-height: 32px;
 }
 .navbar {
     margin-top: 10%;
@@ -76,6 +75,7 @@ aside {
     font-family: 'Avenir LT Pro 55 Roman';
     padding-left: 30px;
     margin-bottom: 30px;
+    line-height: 16px;
 }
 .more {
     font-family: 'Avenir LT Pro 55 Roman';
@@ -84,11 +84,13 @@ aside {
     margin-bottom: 106px;
     color: #FFFFFF;
     cursor: pointer;
+    line-height: 19px;
 }
 .navbar a:hover, .following a:hover{
     background-color: #f14696;
     border-radius: 12px;
     transition: background-color 0.3s linear;
+    letter-spacing: 0.8px;
 }
 /* header */
 .content {
@@ -101,6 +103,7 @@ header {
     max-height: 116px;
     width: 100%;
     border-bottom: solid 1px rgba(54, 53, 53, 0.2);  
+    padding-bottom: 30px;
 }
 .hidden {
     display: none;
@@ -108,6 +111,7 @@ header {
     background-color: #141314;
     margin-right: 20%;
     cursor: pointer;
+    opacity: 70%;
 }
 .search {
     width: 30%;
@@ -139,15 +143,17 @@ header {
     align-items: center;
     justify-content: space-evenly;
     max-height: 56px;
-    margin-top: 30px;   
+    margin-top: 30px; 
 }
 .icon p{
     font-size: 14px;
     font-family: 'Avenir LT Pro 55 Roman';
     color: #FF2288;
     line-height: 19px;
-    cursor: pointer;
-    
+    cursor: pointer;  
+}
+.icon p:hover {
+    letter-spacing: 1px; 
 }
 .inbox, .notification {
     width: 25px;
@@ -157,6 +163,22 @@ header {
     background-repeat: no-repeat;
     margin-left: 30px;
     cursor: pointer;
+}
+.point {
+    animation-name: news;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes news {
+    from {
+        width: 40%;
+        height: 40%; 
+    }
+    to {
+        width: 45%;
+        height: 45%;
+    }
 }
 input[type=file]{
     display: none;
@@ -178,6 +200,7 @@ input[type=file]{
     align-items: center;
     justify-content: center;
     margin-left: 30px;
+    transition: 0.3s all ease-in-out;
 } 
 .upload label {
     color: #FFFFFF;
@@ -185,7 +208,12 @@ input[type=file]{
     font-family: 'Avenir LT Pro 55 Roman';  
     cursor: pointer;  
     text-transform: uppercase;
-} 
+    line-height: 19px;
+}
+.upload:hover {
+      border: 2px solid #FF2288;
+      letter-spacing: 2px;    
+}
 /* section */
 .section-bar {
     justify-content: center; 
@@ -211,9 +239,14 @@ input[type=file]{
     color: #222222;
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
-    transition: transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear all;
     padding: 10px;
+    line-height: 21px;
 }
+.section-bar a:hover {
+    background-color: #F2F2F2;
+    border-radius: 12px;
+} 
 .filter {
     width: 10%;
     height: 100%;
@@ -227,13 +260,16 @@ input[type=file]{
     height: 100%;
     align-items: center;
     justify-content: space-between; 
-    cursor: pointer;
 }
 .type-list p {
     margin-right: 8%;
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
     display: none;
+}
+.type-list img {
+    display: none;
+    cursor: pointer;
 }
 .filter img {
     width: 24px;
@@ -245,15 +281,43 @@ input[type=file]{
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
 } 
-.section-bar a:hover {
-    background-color: #F2F2F2;
-    border-radius: 12px;
-} 
 .article {
     width: 100%;
     margin-top: 40px;
     justify-content: space-evenly; 
 } 
+.box {
+    position: relative;
+}
+.add, .heart {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: width 3s height 3s linear;
+}
+.add:hover, .heart:hover {
+    width: 40px;
+    height: 40px;
+}
+.add {
+    background-image: url(../images/Component\ 10\ –\ 1.png);
+    top: 30px;
+}
+.heart {
+    background-image: url(../images/Component\ 6\ –\ 2.png);
+    top: 70px;
+}
+.heart:hover{
+    background-color: #FF2288;
+}
+.add:hover {
+    background-color: #F2F2F2;
+}
 .box, .box img {
     max-width: 289px;
     width: 100%;
@@ -263,25 +327,30 @@ input[type=file]{
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-}   
+} 
 .load {
-    width: 20%;
+    width: 15%;
     height: 56px;
     background-color:#F2F2F2;
     justify-content: center;
     border-radius: 12px;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 30%;
     cursor: pointer;
-    margin-top: 70px;;
+    margin-top: 70px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
 }
 .load:hover {
+    width: 20%; 
     background-color: #FF2288;
     color: #FFFFFF;
 }
 .load p {
     font-family: 'Avenir LT Pro 55 Roman';
     font-size: 16px;
+    line-height: 21px;
 }
 .box:hover {
     background-color:#F2F2F2;
@@ -321,6 +390,10 @@ input[type=file]{
     line-height: 21px;
     margin-bottom: 10px;
 }
+.profile h6:hover {
+    color: #FF2288;
+    cursor: pointer;
+}
 .profile p {
     font-family: 'Avenir LT Pro 45 Book';
     font-size: 11px;
@@ -341,6 +414,7 @@ input[type=file]{
 .profile button:hover {
     background-color: #FF2288;
     color: #FFFFFF;
+    transition: all 0.3s linear;
 }
 .active {
     background-color: rgb(231, 226, 226);
@@ -383,6 +457,8 @@ footer {
     width: 100%;
     justify-content: space-between;
     margin-top: 113px;
+    border-top: solid 1px rgba(54, 53, 53, 0.2);
+    padding-top: 40px;
 }
 .footer a {
     margin-left: 20px;
@@ -405,15 +481,33 @@ footer {
 }
 /* 2nd page */
 .person {
-    border: 2px solid #FF2288;
+    border: 2px solid #E7E7E7;
     border-radius: 28px;
     padding: 10px;
+    transition: width 2s, height 2s linear;
+}
+.person:hover, .person-1:hover {
+    width: 120%;
+    height: 120%;
 }
 .section-bar-2 {
     max-width: 90%;
     width: 100%;
     margin: 70px auto;
     flex-direction: column;
+}
+.view {
+    display: none;
+    margin-bottom: 5%;
+    justify-content: flex-end;
+}
+.view p {
+    font-family: 'Avenir LT Pro 55 Roman';
+    font-size: 14px;
+    display: none;
+    opacity: 70%;
+    justify-content: flex-end;
+    letter-spacing: 0.5px;
 }
 table {
     border-collapse: collapse;
@@ -440,7 +534,7 @@ th, td {
 }
 tr:first-child:hover {
     transform: none !important;
-    background-color: white !important;
+    background-color: #fff !important;
     cursor:inherit !important;
 }
 tr:nth-child(even):hover {
@@ -453,12 +547,12 @@ tr:nth-child(odd):hover {
     background-color: #F2F2F2;
     cursor: pointer;
 }
-td:hover {
+tr:hover td {
     color: #FF2288;
 }
 /* responsive  */
 @media(max-width:1024px){
-    .navbar img, .following p, .search, .icon p, .upload, .menu ul, .following h5, .for-designer a, .hire-designer a, .company a, 
+    .navbar img, .following p, .search, .upload, .menu ul, .following h5, .for-designer a, .hire-designer a, .company a, 
     .director a, td:first-child, th:first-child, th:nth-child(5), td:nth-child(5), th:nth-child(3), td:nth-child(3) {
         display: none;
     }
@@ -470,15 +564,13 @@ td:hover {
     }
     .navbar a, .following a, .logo, .more, .burger{
         justify-content: center;  
+        align-items: center;
     }
     header {
         justify-content: space-evenly;
     }
-    .hidden, .arrow, .type-list, .type-list p {
+    .hidden, .arrow, .type-list, .type-list p, .type-list img {
         display: block; 
-    }
-    .type-list {
-        margin-right: 15%;
     }
     .logo p, .logo span {
         font-size: 15px;
@@ -486,13 +578,24 @@ td:hover {
     .container {
         flex-wrap: wrap;
     }
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
     .burger {
         margin-left: 15%;
     } 
+    .logo-box {
+        align-content: center;
+        align-items: center;
+    }
+    .view, .view p {
+        display: block;
+    }
+    .menu {
+        background-color: #F2F2F2;
+        border-radius: 12px;
+    }
+    .type-list {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 @media(max-width:480px){
     .logo, .navbar p, .inbox, .notification, th:nth-child(6), td:nth-child(6) {
@@ -500,5 +603,29 @@ td:hover {
     }
     .navbar img {
         display: block;  
+    }
+    .load {
+        align-items: center;
+        justify-content: center;
+    }
+    header {
+        justify-content: center;
+    }
+    .box p {
+        font-size: 14px;
+    }
+    .load p {
+        font-size: 8px;
+        text-align: center;
+    }
+    .navbar img, .following img{
+        margin:0;
+    }
+    .more {
+        text-align: center;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
     }
 }
